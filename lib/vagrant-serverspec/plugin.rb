@@ -15,6 +15,11 @@ module VagrantPlugins
         require_relative 'provisioner'
         Provisioner
       end
+
+      command(:serverspec) do
+        require_relative 'command'
+        Command
+      end
     end
   end
 end
