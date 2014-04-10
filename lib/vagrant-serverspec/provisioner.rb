@@ -6,7 +6,7 @@ module VagrantPlugins
     class Provisioner < Vagrant.plugin('2', :provisioner)
       def provision
         require 'serverspec'
-        @spec_files = @config.spec_files
+        @spec_files = @machine.config.serverspec.spec_files
 
         RSpec.configure do |spec|
           spec.before :all do
